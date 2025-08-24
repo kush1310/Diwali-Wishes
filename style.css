@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background 0.5s, color 0.5s;
+    padding: 2vw;
+}
+.container {
+    max-width: 1000px;
+    width: 95%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s, color 0.5s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1 {
+    color: #ff0000;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin: 0.5rem 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+}
+.container h2 {
+    color: #42c122;
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    margin: 1rem 0;
+    font-weight: bold;
+}
+.container p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0.8rem 0;
+    color: #333;
+}
+body.dark-mode {
+    background: #000000;
+    color: #ffffff;
+}
+body.dark-mode .container {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .container h1 {
+    color: #ffcc00;
+}
+body.dark-mode .container h2 {
+    color: #ff9966;
+}
+body.dark-mode .container p {
+    color: #ddd;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 0.8rem;
+}
+label {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+#themeSwitch {
+    appearance: none;
+    width: 50px;
+    height: 26px;
+    background: #000000;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: background 0.3s;
+}
+#themeSwitch::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #00fff7;
+    transition: 0.3s;
+    transform: translateX(2px);
+    top: 2px;
+}
+#themeSwitch:checked {
+    background: #ff9966;
+}
+#themeSwitch:checked::before {
+    transform: translateX(24px);
+    background: #fff;
+}
+@keyframes slideshow {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .images img {
+        border-radius: 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+}
