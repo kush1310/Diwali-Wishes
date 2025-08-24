@@ -63,3 +63,13 @@ The page is fully responsive and adapts seamlessly to mobile, tablet, and deskto
 ```bash
 git clone https://github.com/yourusername/Diwali-Wishes-WebPage.git
 ```
+
+--- 
+
+### Author  
+--- Kush Amit Shah  
+--- Diploma in Computer Engineering  
+--- B.Tech (Pursuing)
+--- Gujarat, India  
+--- Mail: kushshah900@gmail.com  
+--- Interests: Cybersecurity | Web Development | Logical Programming  
